@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:textAllCaps="false"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="3"
+    tools:context=".MainActivity">
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1">
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:gravity="center_vertical"
+            android:layout_columnWeight="2"
+            android:background="@color/white"
+            android:text="Score: 100"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_flexBasisPercent="30%" />
+
+        <TextView
+            android:id="@+id/timer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:gravity="center_vertical"
+            android:layout_columnWeight="2"
+            android:background="@color/white"
+            android:text="1.11"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_flexBasisPercent="30%" />
+
+        <TextView
+            android:id="@+id/highscore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:gravity="center_vertical"
+            android:layout_columnWeight="2"
+            android:background="@color/white"
+            android:text="Highscore: 100"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_flexBasisPercent="40%" />
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/colorMonitorBackground"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="10"
+        android:gravity="center"
+        >
+        <TextView
+            android:id="@+id/colorMonitorText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="blue"
+            android:textSize="100sp"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:background="@color/white"/>
+    </RelativeLayout>
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1" >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:id="@+id/falseButton"
+            android:text="false"
+            android:textAllCaps="false"
+            app:layout_flexBasisPercent="50%" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:id="@+id/trueButton"
+            android:text="true"
+            android:textAllCaps="false"
+            app:layout_flexBasisPercent="50%" />
+    </com.google.android.flexbox.FlexboxLayout>
+
+</GridLayout>
